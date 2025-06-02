@@ -62,7 +62,7 @@
         paste_spam5: paste_spam5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(ENTER) &kp LC(V) &kp ENTER &kp LS(ENTER) &kp LC(V) &kp ENTER &kp LS(ENTER) &kp LC(V) &kp ENTER &kp LS(ENTER) &kp LC(V) &kp ENTER &kp LS(ENTER) &kp LC(V) &kp ENTER>;
+            bindings = <&kp LS(ENTER) &kp LC(V) &kp ENTER &kp LS(ENTER) &kp LC(V) &kp ENTER>;
             label = "PASTE_SPAM5";
             wait-ms = <10>;
             tap-ms = <10>;
