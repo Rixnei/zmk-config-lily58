@@ -50,13 +50,18 @@
     };
 
     macros {
-        lol: lol {
+        paste_show: paste_show {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(ENTER) &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp S &kp I &kp G &kp N &kp U &kp P &kp DOT &kp L &kp E &kp A &kp G &kp U &kp E &kp O &kp F &kp L &kp E &kp G &kp E &kp N &kp D &kp S &kp DOT &kp C &kp O &kp M &kp FSLH &kp ENTER>;
-            label = "LOL";
-            wait-ms = <40>;
-            tap-ms = <40>;
+            bindings = <&kp LS(ENTER) &kp V>;
+            label = "PASTE_SHOW";
+        };
+
+        paste_x4: paste_x5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(ENTER)>;
+            label = "PASTE_X5";
         };
     };
 
