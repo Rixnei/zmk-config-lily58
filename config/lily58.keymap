@@ -53,20 +53,12 @@
         paste_show: paste_show {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <
-                &kp H &kp T &kp T &kp P &kp S &kp COLON &kp SLASH &kp SLASH
-                &kp W &kp W &kp W &kp DOT
-                &kp L &kp E &kp A &kp G &kp U &kp E
-                &kp O &kp F
-                &kp L &kp E &kp G &kp E &kp N &kp D &kp S
-                &kp DOT &kp C &kp O &kp M
-                &kp SLASH
-                &kp ENTER
-            >;
+            bindings = <&kp LS(ENTER) &kp H &kp T &kp T &kp P &kp S &kp COLON &kp SLASH &kp SLASH &kp W &kp W &kp W &kp DOT &kp L &kp E &kp A &kp G &kp U &kp E &kp O &kp F &kp L &kp E &kp G &kp E &kp N &kp D &kp S &kp DOT &kp C &kp O &kp M &kp SLASH &kp ENTER>;
             label = "PASTE_SHOW";
+            wait-ms = <2>;
+            tap-ms = <2>;
         };
     };
-
 
     keymap {
         compatible = "zmk,keymap";
@@ -99,11 +91,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans     &trans            &trans             &trans             &trans      &trans                       &trans     &trans     &trans     &trans    &trans    &trans
-&kp F1     &kp F2            &kp F3             &kp F4             &kp F5      &kp F6                       &kp F7     &kp F8     &kp F9     &kp F10   &kp F11   &kp F12
-&kp GRAVE  &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR  &kp PRCNT                    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp TILDE
-&trans     &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans      &trans     &lol      &trans  &trans     &kp MINUS  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE
-                                                &trans             &trans      &trans     &trans    &trans  &trans     &trans     &trans
+&trans     &trans            &trans             &trans             &trans      &trans                            &trans     &trans     &trans     &trans    &trans    &trans
+&kp F1     &kp F2            &kp F3             &kp F4             &kp F5      &kp F6                            &kp F7     &kp F8     &kp F9     &kp F10   &kp F11   &kp F12
+&kp GRAVE  &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR  &kp PRCNT                         &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp TILDE
+&trans     &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans      &trans     &paste_show    &trans  &trans     &kp MINUS  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE
+                                                &trans             &trans      &trans     &trans         &trans  &trans     &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
