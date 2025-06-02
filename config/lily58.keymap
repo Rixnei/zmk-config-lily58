@@ -15,7 +15,7 @@
 
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <0 1>;
+            key-positions = <42 43>;
             bindings = <&kp ESC>;
         };
     };
@@ -46,6 +46,15 @@
             quick-tap-ms = <200>;
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
+        };
+    };
+
+    macros {
+        lol: lol {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(ENTER) &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH &kp S &kp I &kp G &kp N &kp U &kp P &kp DOT &kp L &kp E &kp A &kp G &kp U &kp E &kp O &kp F &kp L &kp E &kp G &kp E &kp N &kp D &kp S &kp DOT &kp C &kp O &kp M &kp FSLH &kp ENTER>;
+            label = "LOL";
         };
     };
 
@@ -83,7 +92,7 @@
 &trans     &trans            &trans             &trans             &trans      &trans                       &trans     &trans     &trans     &trans    &trans    &trans
 &kp F1     &kp F2            &kp F3             &kp F4             &kp F5      &kp F6                       &kp F7     &kp F8     &kp F9     &kp F10   &kp F11   &kp F12
 &kp GRAVE  &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR  &kp PRCNT                    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp TILDE
-&trans     &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans      &trans     &trans    &trans  &trans     &kp MINUS  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE
+&trans     &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans      &trans     &lol      &trans  &trans     &kp MINUS  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE
                                                 &trans             &trans      &trans     &trans    &trans  &trans     &trans     &trans
             >;
 
