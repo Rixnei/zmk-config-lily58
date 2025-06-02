@@ -53,12 +53,31 @@
         paste_show: paste_show {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(ENTER) &kp H &kp T &kp T &kp P &kp S &kp COLON &kp SLASH &kp SLASH &kp W &kp W &kp W &kp DOT &kp L &kp E &kp A &kp G &kp U &kp E &kp O &kp F &kp L &kp E &kp G &kp E &kp N &kp D &kp S &kp DOT &kp C &kp O &kp M &kp SLASH &kp ENTER>;
+            bindings = <
+                &kp LS(ENTER)
+                &kp LC(V)
+            >;
             label = "PASTE_SHOW";
             wait-ms = <2>;
             tap-ms = <2>;
         };
+    
+        paste_spam5: paste_spam5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <
+                &kp LS(ENTER) &kp LC(V) &kp ENTER
+                &kp LS(ENTER) &kp LC(V) &kp ENTER
+                &kp LS(ENTER) &kp LC(V) &kp ENTER
+                &kp LS(ENTER) &kp LC(V) &kp ENTER
+                &kp LS(ENTER) &kp LC(V) &kp ENTER
+            >;
+            label = "PASTE_SPAM5";
+            wait-ms = <5>;
+            tap-ms = <5>;
+        };
     };
+
 
     keymap {
         compatible = "zmk,keymap";
